@@ -1,0 +1,4 @@
+Kenyon Nystrom
+
+I plan to use Kali through Virtual Box on my Windows 10 computer.
+The Kali virtual environment is all set up and working.
