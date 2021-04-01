@@ -1,0 +1,22 @@
+Kenyon Nystrom
+
+1. "ip addr" (or "ifconfig" if net-tools is installed). Bonus: simultaneous wifi
+	and ethernet connections should yield two distinct network interfaces in the
+	output of these commands, showing the IP address for each.
+2. "ping HOSTNAME"
+3. "nslookup IPADDRESS"
+4. Use "scp" followed by info about receiving server; enter the password for
+	that server to complete transfer. Using "sftp" also works, which puts the
+	user into an interactive environment and is useful for transferring a
+	number of files.
+5. "lsof -i :PORT", although I believe this does not work on WSL (certainly WSL2
+	at least) without using a workaround wherein port forwarding rules and
+	firewall rules are removed and re-added.
+	(https://github.com/microsoft/WSL/issues/4150)
+6. "netstat -tulpn", but the same issue exists as in the previous question. The
+	alternative in Windows Powershell is "Get-NetTCPConnection".
+7. "wget 'URL'"
+8. "curl -I URL"
+9. The best answer I could find was to use tcpdump to monitor the interaction
+	with a webpage and capture it as raw packets, then essentially format that
+	data such that it is readable in an HTTP header style.
